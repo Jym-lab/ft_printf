@@ -31,6 +31,7 @@ char	*ft_convert_hex(unsigned long long num, const char format)
 	int		num_len;
 	char	*hex_str;
 
+	num_len = 0;
 	if (format == 'p')
 		num_len = ft_hexlen(num);
 	else if (format == 'x' || format == 'X')
@@ -54,6 +55,7 @@ int	ft_print_ptr(unsigned long long ptr)
 	int		length;
 	char	*ptr_str;
 
+	ptr_str = NULL;
 	length = write(1, "0x", 2);
 	if (!ptr)
 		length += ft_print_char('0');
@@ -72,6 +74,7 @@ int	ft_print_hex(unsigned int num, const char format)
 	int		i;
 	char	*hex_str;
 
+	hex_str = NULL;
 	if (!num)
 		length = ft_print_char('0');
 	else

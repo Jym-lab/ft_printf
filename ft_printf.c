@@ -36,6 +36,7 @@ int	check_format(const char format, va_list ap)
 {
 	int	length;
 
+	length = 0;
 	if (format == 'c')
 		length = ft_print_char(va_arg(ap, int));
 	else if (format == 's')
